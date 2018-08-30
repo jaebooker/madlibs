@@ -1,3 +1,4 @@
+import random
 from random import shuffle
 
 choice = raw_input("Do you want to randomize your answers? (y/n) ")
@@ -18,10 +19,10 @@ answer = choice.lower()
 name = word1
 nouns = [word4, word7]
 ajectives = [word5, word10]
-verbs = [word2, word6, word8, word9]
+verbs = [word2, word3, word6, word8, word9]
 sentences = [" walked into MakeSchool, hoping to ", ", or at least ", ", carrying only a ", ". Taking off their shoes, the ", " expressions on the students' faces meant they were certainly going to ", ". However, the ", " had no interest to ", ", instead choosing to ", " "]
-#sentences2 = []
-#sentences3 = []
+sentences2 = ["something", "something else"]
+sentences3 = ["something 2", "something else too"]
 def tellStory():
     for i in range(0,10):
         if i != 9:
@@ -32,7 +33,33 @@ def randomStory():
     shuffle(nouns)
     shuffle(ajectives)
     shuffle(verbs)
-    print(verbs)
+    random_sentence = random.randrange(0,3)
+    if random_sentence == 0:
+        new_sentence = sentences
+    elif random_sentence == 1:
+        new_sentence = sentences2
+    else:
+        new_sentence = sentences3
+    new_sentence = sentences
+    new_story = name + new_sentence[0]
+    verb_count = 0
+    noun_count = 0
+    for i in range(1,10):
+        if i == 3 or i == 6:
+            new_story += nouns[noun_count]
+            new_story += new_sentence[i]
+            noun_count += 1
+        elif i == 4:
+            new_story += ajectives[0]
+            new_story += new_sentence[i]
+        elif i == 9:
+            new_story += ajectives[1]
+        else:
+            new_story += verbs[verb_count]
+            new_story += new_sentence[i]
+            verb_count += 1
+    print(new_story)
+
 
 def answer_choice():
     if answer == 'y':
