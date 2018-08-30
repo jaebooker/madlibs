@@ -1,3 +1,6 @@
+from random import shuffle
+
+choice = raw_input("Do you want to randomize your answers? (y/n) ")
 word1 = raw_input("Enter a name: ")
 word2 = raw_input("Enter a verb: ")
 word3 = raw_input("Enter another verb: ")
@@ -8,8 +11,35 @@ word7 = raw_input("Enter a noun: ")
 word8 = raw_input("Enter a verb: ")
 word9 = raw_input("Enter a verb: ")
 word10 = raw_input("Enter an ajective: ")
-story = word1 + " walked into MakeSchool, hoping to " + word2 + ", or at least " + word3 + ". Carrying only a " + word4 + ". Taking off their shoes, the " + word5 + " expression on the students' faces meant they were certainly going to " + word6 + ". However, the " + word7 + " had no interest to " + word8 + ", instead choosing to " + word9 + " " + word10
-print(story)
+#story = word1 + " walked into MakeSchool, hoping to " + word2 + ", or at least " + word3 + ". Carrying only a " + word4 + ". Taking off their shoes, the " + word5 + " expression on the students' faces meant they were certainly going to " + word6 + ". However, the " + word7 + " had no interest to " + word8 + ", instead choosing to " + word9 + " " + word10
+#print(story)
+words = [word1, word2, word3, word4, word5, word6, word7, word8, word9, word10]
+answer = choice.lower()
+name = word1
+nouns = [word4, word7]
+ajectives = [word5, word10]
+verbs = [word2, word6, word8, word9]
+sentences = [" walked into MakeSchool, hoping to ", ", or at least ", ", carrying only a ", ". Taking off their shoes, the ", " expressions on the students' faces meant they were certainly going to ", ". However, the ", " had no interest to ", ", instead choosing to ", " "]
+#sentences2 = []
+#sentences3 = []
+def tellStory():
+    for i in range(0,10):
+        if i != 9:
+            print(words[i] + sentences[i])
+        else:
+            print(words[i])
+def randomStory():
+    shuffle(nouns)
+    shuffle(ajectives)
+    shuffle(verbs)
+    print(verbs)
+
+def answer_choice():
+    if answer == 'y':
+        randomStory()
+    else:
+        tellStory()
+answer_choice()
 def test():
     print("Running test")
     word1 = "Jerremy"
