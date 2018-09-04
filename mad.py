@@ -21,8 +21,8 @@ nouns = [word4, word7]
 ajectives = [word5, word10]
 verbs = [word2, word3, word6, word8, word9]
 sentences = [" walked into MakeSchool, hoping to ", ", or at least ", ", carrying only a ", ". Taking off their shoes, the ", " expressions on the students' faces meant they were certainly going to ", ". However, the ", " had no interest to ", ", instead choosing to ", " "]
-sentences2 = ["something", "something else"]
-sentences3 = ["something 2", "something else too"]
+sentences2 = [" was sick of having to ", " all the time. Secretly, hoping to ", " instead. To the person's great shock and horror, a ", " could be seen moving silently across the floor, looking ", "as ever, probably planning a deceptive scheme to ", "the ", "was even worse, wishing to ", "like all the others. Or else it would " " "]
+sentences3 = [" and the others had a trick up their sleeves. They were planning to ", "and then ", ", using only a ", ": a most " " plot indeed. Very few would be so willing to ", "on a ", ". Now, either they would " "or else " " "]
 def tellStory():
     for i in range(0,10):
         if i != 9:
