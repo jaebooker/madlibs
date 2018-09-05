@@ -90,6 +90,6 @@ def test():
     word7 = "turtle"
     word8 = "fly"
     word9 = "die"
-    word10 = "gracefully"
+    word10 = "graceful"
     print(story)
 #test()
